@@ -1,0 +1,19 @@
+{
+	"files.exclude": {
+		"**/.*rc": true,
+		"**/.*ignore": true,
+		"**/bun.lockb": true,
+		"**/node_modules": true,
+		"frontend/.svelte-kit": true,
+		".git*": true,
+		"frontend/postcss.config.cjs": true
+	},
+	"explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.patterns": {
+		"package.json": "tsconfig.json, wrangler.json",
+		"svelte.config.js": "vite.config.ts, tailwind.config.ts"
+	},
+	"editor.tabSize": 2,
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false
+}

@@ -1,0 +1,17 @@
+{
+	"name": "superspeare-query",
+	"main": "src/index.ts",
+	"compatibility_date": "2023-10-10",
+	"vectorize": [{
+		"binding": "VECTORIZE",
+		"index_name": "superspeare"
+	}],
+	"ai": {
+		"binding": "AI"
+	},
+	"route": {
+		"pattern": "superspeare.cloudflare.community/*",
+		"zone_name": "cloudflare.community",
+		"custom_domain": false
+	}
+}
