@@ -1,14 +1,15 @@
 <script lang="ts">
+	import { Link } from "$lib";
+
+	let heading = "About SuperSpeare";
 	const enter = (e: MouseEvent) => {
-		const elem = e.target as HTMLHeadingElement;
-		elem.innerText = Math.random() > 0.8 ? "About SuperConnectivitySpeare" : "About ConnectivitySpeare";
+		heading = Math.random() > 0.8 ? "About SuperConnectivitySpeare" : "About ConnectivitySpeare";
 	};
 	const leave = (e: MouseEvent) => {
-		const elem = e.target as HTMLHeadingElement;
-		elem.innerText = "About SuperSpeare";
+		heading = "About SuperSpeare";
 	};
 </script>
-<h1 class="text-8xl" on:mouseenter={enter} on:mouseleave={leave}>About SuperSpeare</h1>
+<h1 class="text-8xl" on:mouseenter={enter} on:mouseleave={leave}>{heading}</h1>
 
 <p>Welcome to Superspeare - Where AI Meets Shakespearean Splendor!</p>
 
@@ -40,5 +41,4 @@
 
 <p>Embrace the future of literary exploration with Superspeare. Let AI guide you through the illustrious world of William Shakespeare's works, uncovering hidden gems and newfound appreciation. Together, we're redefining the way we connect with one of history's greatest wordsmiths.</p>
 
-<a href="/">Get Started</a> | <a href="mailto:blackhole@openai.com">Contact Us</a> | <a href="https://chat.openai.com" target="_blank">FAQ</a>
-<!-- Just a joke lol please don't sue -->
+<Link href="/about/serious">See a more serious about page here</Link>

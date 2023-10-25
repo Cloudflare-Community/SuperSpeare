@@ -31,6 +31,7 @@ export default <ExportedHandler<Environment>>{
 
 				const response = new Response(response_object.body, {
 					headers: {
+						"access-control-allow-origin": "*",
 						"cloudflare-cdn-cache-control": "max-age=3600",
 					}
 				});
@@ -48,7 +49,7 @@ export default <ExportedHandler<Environment>>{
 
 				const modelResp: EmbeddingResponse = await ai.run("@cf/baai/bge-base-en-v1.5", { text: query });
 
-				const inserted = await env.VECTORIZE.query(modelResp.data[0], { returnVectors: true });
+				const inserted = await env.VECTORIZE.query(modelResp.data[0], { returnVectors: true, topK: 10 });
 
 				// Commiting crimes
 				const response = Response.json({
@@ -65,6 +66,7 @@ export default <ExportedHandler<Environment>>{
 					}),
 				}, {
 					headers: {
+						"access-control-allow-origin": "*",
 						"cloudflare-cdn-cache-control": "max-age=3600",
 					},
 				});

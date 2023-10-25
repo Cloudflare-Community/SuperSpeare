@@ -1,0 +1,2 @@
+const EXCLUDE = ["of", "about", "for", "a", "the"];
+export const formatName = (name: string) => name.split("-").map((word, index) => EXCLUDE.includes(word) && index !== 0 ? word : word[0].toUpperCase() + word.slice(1)).join(" ");
