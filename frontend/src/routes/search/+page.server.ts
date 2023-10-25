@@ -9,7 +9,7 @@ export const load: PageServerLoad = async ({ url }) => {
 		throw error(400, "No query provided");
 	}
 
-	const response = await fetch("https://superspeare.cloudflare.community/?query=" + encodeURIComponent(query));
+	const response = await fetch("https://superspeare.cloudflare.community/search?query=" + encodeURIComponent(query));
 
 	return response.json<Result>();
 }

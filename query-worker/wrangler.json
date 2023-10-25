@@ -13,5 +13,9 @@
 		"pattern": "superspeare.cloudflare.community/*",
 		"zone_name": "cloudflare.community",
 		"custom_domain": false
-	}
+	},
+	"r2_buckets": [{
+		"binding": "R2",
+		"bucket_name": "superspeare"
+	}] 
 }
