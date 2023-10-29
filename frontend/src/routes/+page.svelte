@@ -35,7 +35,7 @@
 	if (selectedMatch !== null  && window.innerWidth < 640) {
 		selectedMatch = null;
 	}
-}}>
+}} role="button" tabindex="0">
 	<div class="w-full sm:w-[50vw]">
 		<h1 class="text-4xl sm:text-6xl italic">Welcome to SuperSpeare</h1>
 		<p class="text-md sm:text-2xl">
