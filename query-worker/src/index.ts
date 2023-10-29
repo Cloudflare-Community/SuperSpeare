@@ -74,6 +74,7 @@ export default <ExportedHandler<Environment>>{
 				ctx.waitUntil(cache.put(req, response.clone()));
 				return response;
 			}
+			return Response.json({ error: "Invalid path" }, { status: 404 });
 		} catch (e) {
 			return Response.json(e, { status: 500 });
 		}

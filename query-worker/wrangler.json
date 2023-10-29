@@ -9,11 +9,15 @@
 	"ai": {
 		"binding": "AI"
 	},
-	"route": {
-		"pattern": "superspeare.cloudflare.community/*",
+	"routes": [{
+		"pattern": "superspeare.cloudflare.community/full_text*",
 		"zone_name": "cloudflare.community",
 		"custom_domain": false
-	},
+	}, {
+		"pattern": "superspeare.cloudflare.community/search*",
+		"zone_name": "cloudflare.community",
+		"custom_domain": false
+	}],
 	"r2_buckets": [{
 		"binding": "R2",
 		"bucket_name": "superspeare"
