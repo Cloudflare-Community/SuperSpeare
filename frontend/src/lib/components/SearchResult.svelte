@@ -17,7 +17,7 @@
 	aria-label="View full text"
 	role="button"
 	tabindex="0"
-	class="block w-[40rem] bg-slate-100 my-5 px-5 py-5"
+	class="block w-9/10 sm:w-[40rem] bg-slate-100 my-5 px-5 py-5"
 >
 	<h2 class="text-3xl">"{match.metadata.text}"</h2>
 	<div class="flex justify-between">

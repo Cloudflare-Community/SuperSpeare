@@ -3,13 +3,13 @@
 
 	let heading = "About SuperSpeare";
 	const enter = (e: MouseEvent) => {
-		heading = Math.random() > 0.8 ? "About SuperConnectivitySpeare" : "About ConnectivitySpeare";
+		heading = Math.random() > 0.8 ? "About SuperConnectivity​Speare" : "About Connectivity​Speare";
 	};
 	const leave = (e: MouseEvent) => {
 		heading = "About SuperSpeare";
 	};
 </script>
-<h1 class="text-8xl" on:mouseenter={enter} on:mouseleave={leave}>{heading}</h1>
+<h1 class="text-5xl sm:text-8xl" on:mouseenter={enter} on:mouseleave={leave}>{heading}</h1>
 
 <p>Welcome to Superspeare - Where AI Meets Shakespearean Splendor!</p>
 

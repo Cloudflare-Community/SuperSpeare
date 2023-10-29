@@ -5,8 +5,8 @@
 	const enter = (e: MouseEvent) => {
 		heading =
 			Math.random() > 0.8
-				? "About SuperConnectivitySpeare (serious)"
-				: "About ConnectivitySpeare (serious)";
+				? "About SuperConnectivity​Speare (srsly)"
+				: "About Connectivity​Speare (srsly)";
 	};
 	const leave = (e: MouseEvent) => {
 		heading = "About SuperSpeare (serious)";
@@ -14,7 +14,7 @@
 </script>
 
 <div class="h-screen">
-	<h1 class="text-8xl" on:mouseenter={enter} on:mouseleave={leave}>{heading}</h1>
+	<h1 class="text-6xl sm:text-8xl" on:mouseenter={enter} on:mouseleave={leave}>{heading}</h1>
 	<h2 class="text-4xl mt-3 mb-1">The project</h2>
 	<p>
 		This project is built on top of Cloudflare AI, Vectorize, Pages and Workers. It uses <code

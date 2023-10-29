@@ -22,6 +22,7 @@
 			return { text: v, index: i };
 		});
 
+
 		const title = lines.shift()?.text || "Not found";
 		const author = lines.shift()?.text || "";
 
@@ -47,7 +48,7 @@
 	}
 </script>
 
-<div class="m-20">
+<div class="sm:m-10 w-[100%] parchment-popup bg-white sm:bg-transparent p-3 sm:p-0">
 	{#if !play_data}
 		<Loading className="text-5xl">Loading</Loading>
 	{:else}
@@ -59,14 +60,14 @@
 
 			<div class="text-2xl">
 				{#each play_data.lines as line}
-					{#if line.text === ""}
+					{#if line.text === "\r"}
 						<br />
-					{:else if URL.canParse(line.text) && line.text.startsWith("https://")}
+					{:else if line.text.startsWith("https://")}
 						<a class="underline text-sky-500" href={line.text}>{line.text}</a>
 					{:else}
 						<p
 							id={`ln${line.index}`}
-							class={`w-max ${line.index === line_index ? "bg-yellow-300" : ""}`}
+							class={`w-full sm:w-max ${line.index === line_index ? "bg-yellow-300" : ""}`}
 						>
 							{line.text}
 						</p>
