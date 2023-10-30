@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { SearchResult, API_URL, Loading, FullText } from "$lib";
+	import { SearchResult, API_URL, Loading, FullText, Meta } from "$lib";
 	import { onMount } from "svelte";
 
 	const fun_quotes = ["What, you egg?", "He stabs him", "You Saucy Boy"];
@@ -30,6 +30,13 @@
 		selectedMatch = match;
 	}
 </script>
+
+<svelte:head>
+	<Meta
+		title="SuperSpeare"
+		description="Enter your favorite Spakespeare quote and see what play it's from!"
+		url="https://superspeare.cloudflare.community/" />
+</svelte:head>
 
 <div class="flex justify-between" on:mouseup={() => {
 	if (selectedMatch !== null  && window.innerWidth < 640) {

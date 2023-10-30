@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Link } from "$lib";
+	import { Link, Meta } from "$lib";
 
 	let heading = "About SuperSpeare";
 	const enter = (e: MouseEvent) => {
@@ -9,6 +9,13 @@
 		heading = "About SuperSpeare";
 	};
 </script>
+
+<svelte:head>
+	<Meta
+		title="About SuperSpeare"
+		description="Discover Shakespeare's timeless wisdom with our AI-powered service, employing advanced Vector Search technology to swiftly locate the perfect Bard-inspired quote for any occasion"
+		url="https://superspeare.cloudflare.community/about/" />
+</svelte:head>
 <h1 class="text-5xl sm:text-8xl" on:mouseenter={enter} on:mouseleave={leave}>{heading}</h1>
 
 <p>Welcome to Superspeare - Where AI Meets Shakespearean Splendor!</p>

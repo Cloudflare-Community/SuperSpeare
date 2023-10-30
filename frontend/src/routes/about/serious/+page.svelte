@@ -1,17 +1,24 @@
 <script lang="ts">
-	import { Link } from "$lib";
+	import { Link, Meta } from "$lib";
 
 	let heading = "About Superspeare (serious)";
-	const enter = (e: MouseEvent) => {
+	const enter = () => {
 		heading =
 			Math.random() > 0.8
 				? "About SuperConnectivity​Speare (srsly)"
 				: "About Connectivity​Speare (srsly)";
 	};
-	const leave = (e: MouseEvent) => {
+	const leave = () => {
 		heading = "About SuperSpeare (serious)";
 	};
 </script>
+
+<svelte:head>
+	<Meta
+		title="About SuperSpeare(for real this time)"
+		description="How Zeggy and Allie made SuperSpeare"
+		url="https://superspeare.cloudflare.community/about/serious/" />
+</svelte:head>
 
 <div class="h-screen">
 	<h1 class="text-6xl sm:text-8xl" on:mouseenter={enter} on:mouseleave={leave}>{heading}</h1>

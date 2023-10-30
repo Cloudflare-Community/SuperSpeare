@@ -21,6 +21,12 @@ export default <ExportedHandler<Environment>>{
 			if (pathname === "/embeddings") {
 				const ai = new Ai(env.AI);
 
+				const answer = await ai.run('@cf/meta/llama-2-7b-chat-int8', {
+					messages: [
+						{ content: "Yo", role: "e" }
+					]
+				})
+
 				const input = await req.json<{
 					sourceId: string,
 					stories: {
