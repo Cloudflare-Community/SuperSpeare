@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Link, Meta } from "$lib";
 
-	let heading = "About Superspeare (serious)";
+	let heading = "About SuperSpeare (serious)";
 	const enter = () => {
 		heading =
 			Math.random() > 0.8
