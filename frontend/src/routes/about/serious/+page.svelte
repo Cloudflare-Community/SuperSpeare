@@ -35,7 +35,7 @@
 	<h2 class="text-4xl mt-3 mb-1">Made by</h2>
 	<p>
 		<Link href="https://zegs.me/posts/superspeare">Zeggy</Link> and <Link
-			href="https://www.goalastair.com/en/blog/NVRVx15bFcunz2nj">Allie</Link
+			href="https://www.goalastair.com/en/blog/5cFzs2bzDLlgeoIC">Allie</Link
 		>
 	</p>
 	<h2 class="text-4xl mt-3 mb-1">Acknowledgements</h2>
