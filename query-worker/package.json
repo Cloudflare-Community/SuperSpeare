@@ -2,7 +2,7 @@
   "scripts": {
     "deploy": "wrangler deploy -j"
   },
-  "dependencies": { "@cloudflare/ai": "^1.0.22" },
+  "dependencies": { "@cloudflare/ai": "^1.0.50" },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20231025.0",
     "wrangler": "^3.15.0"
